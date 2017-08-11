@@ -88,17 +88,22 @@ end
 
 get '/users/:id' do
   @user = User.find_by_id(params[:id])
-  # if current_user.id == params[:id]
-  #   erb :"users/show"
-  # else
-  #   flash[:alert] = "Sorry wrong credentials"
-  # end
+  erb :"users/show"
+end
+
+put '/users/:id' do
+  user = User.find_by_id(params[:id])
+  if user.update(params[:user])
+    redirect "/users/#{user.id}"
+  else
+    redirect "/users/#{user.id}/edit"
+  end
   erb :"users/show"
 end
 
 get '/users/:id/edit' do
-  user = User.find_by_id(params[:id])
-  user.update(params[:user])
+  @user = User.find_by_id(params[:id])
+  # user.update(params[:user])
   erb :"users/edit"
 end
 
