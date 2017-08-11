@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>This blog is a blog!</title>
+    <link rel="stylesheet" href="/css/master.css">
   </head>
   <body>
     <div class="flash-message">
@@ -37,5 +38,6 @@
 
     <p>Current user: <%= current_user ? current_user.username : "no one :(" %></p>
     <%= yield %>
+    <script src="/js/master.js"></script>
   </body>
 </html>
