@@ -1,0 +1,30 @@
+<h1>Edit Account</h1>
+
+<form action="/users/<%= @user.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <label><b>Username:</b></label><br>
+  <input
+  type="text"
+  name="user[username]"
+  value="<%= @user.username %>">
+  <br><br>
+
+  <label><b>Password:</b></label><br>
+  <input
+  type="password"
+  name="user[password]"
+  value="<%= @user.password %>">
+  <br><br>
+
+  <label><b>Email:</b></label><br>
+  <input
+  type="text"
+  name="user[email]"
+  value="<%= @user.email %>">
+  <br><br>
+
+  <input type="submit" name="" value="Submit">
+
+</form>
+<p><a href="/users/<%= @user.id %>/delete">Delete</a></p>
