@@ -3,6 +3,14 @@
 <p><%= @user.bio %></p>
 <br>
 <h2> <%= @user.email %> </h2> <br>
+<% @posts.each do |post| %>
+
+  <h3> <%= post.title %>  </h3>
+  <br>
+  <%= post.content%> <br><br>
+
+  <br>
+<% end %>
 <% if current_user %>
 <p><a href="/users/<%= @user.id %>/edit">Edit Profile</a></p>
 <% end %>
