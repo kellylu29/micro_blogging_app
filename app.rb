@@ -17,9 +17,9 @@ get '/' do
 end
 
 post '/posts' do
-  post = Post.new(params[:post])
-
-  if post.save
+  user = User.find_by_id(session[:user_id])
+  post = user.posts.new(params[:post])
+  if post.save && user.save
     redirect "/posts/#{post.id}"
   else
     redirect '/posts/new'
@@ -32,7 +32,7 @@ end
 
 get '/posts/:id' do
   @post = Post.find_by_id(params[:id])
-  @user = User.find_by_id(session[:user_id])
+  @user = @post.user
   erb :"posts/show"
 end
 
@@ -90,6 +90,7 @@ end
 
 get '/users/:id' do
   @user = User.find_by_id(params[:id])
+  @post = Post.find_by_id(params[:user_id])
   erb :"users/show"
 end
 
