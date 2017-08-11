@@ -96,6 +96,17 @@ get '/users/:id' do
   erb :showuser
 end
 
+get '/users/:id/edit' do
+  @user = User.find_by_id(params[:id])
+  erb :edit
+end
+
+get "/users/:id/delete" do
+	user = User.find_by_id(params[:id])
+	user.destroy
+	redirect "/"
+end	
+
 get '/logout' do
   session.clear
   flash[:alert] = "Bye!"
