@@ -3,9 +3,11 @@
 
 <h3> <%= @post.title %> </h3>
 <br>
-<h4> <%= @post.username %> </h4> 
+<h4> User: <a href="/users/<%= @user.id %>"> <%= @user.username %> </a> </h4>
 <br>
-<p> <%= @post.content %> </p> <br>
+<p> <%= @post.content %> </p>
+<br>
+
 
 <br>
 <p><a href="/posts/<%= @post.id %>/edit">Edit Post</a></p>
