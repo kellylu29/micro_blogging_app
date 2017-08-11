@@ -18,6 +18,7 @@ end
 
 post '/posts' do
   post = Post.new(params[:post])
+
   if post.save
     redirect "/posts/#{post.id}"
   else
@@ -31,6 +32,7 @@ end
 
 get '/posts/:id' do
   @post = Post.find_by_id(params[:id])
+  @user = User.find_by_id(session[:user_id])
   erb :"posts/show"
 end
 
