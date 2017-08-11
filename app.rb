@@ -12,7 +12,7 @@ def current_user
 end
 
 get '/' do
-  @posts = Post.all.sort_by { |r| r.id }.reverse
+  @posts = Post.all.last(10).sort_by { |r| r.id }.reverse
   erb :index
 end
 
@@ -103,7 +103,6 @@ end
 
 get '/users/:id/edit' do
   @user = User.find_by_id(params[:id])
-  # user.update(params[:user])
   erb :"users/edit"
 end
 
