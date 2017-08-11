@@ -1,0 +1,8 @@
+#showuser
+<h3> <%= @user.username %> </h3>
+<p><%= @user.bio %></p>
+<br>
+<h2> <%= @user.email %> </h2> <br>
+<% if current_user %>
+<p><a href="/users/<%= @user.id %>/edit">Edit Profile</a></p>
+<% end %>

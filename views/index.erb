@@ -1,5 +1,5 @@
 <h1>This blog is a blog!</h1>
-
+<% if current_user %>
 <% @posts.each do |post| %>
 
   <h3> <%= post.title %>  </h3>
@@ -11,4 +11,7 @@
 
 
   <br>
+<% end %>
+<% else %>
+	<h1>You are not logged in</h1>
 <% end %>
