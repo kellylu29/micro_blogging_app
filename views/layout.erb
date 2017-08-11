@@ -24,6 +24,7 @@
     <a href="/">Home</a>
 
     <% if current_user %>
+      <a href="/posts/new">Add New Post</a>
       <a href="/logout">Logout</a>
 
     <% else %>
@@ -33,8 +34,6 @@
 
     <br>
     <span><a href="/">View All Posts</a></span>
-    <span>|</span>
-    <span><a href="/posts/new">Add New Post</a></span>
 
     <p>Current user: <%= current_user ? current_user.username : "no one :(" %></p>
     <%= yield %>

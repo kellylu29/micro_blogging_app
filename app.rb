@@ -26,12 +26,12 @@ post '/posts' do
 end
 
 get '/posts/new' do
-  erb :new
+  erb :"posts/new"
 end
 
 get '/posts/:id' do
   @post = Post.find_by_id(params[:id])
-  erb :show
+  erb :"posts/show"
 end
 
 put '/posts/:id' do
@@ -45,11 +45,11 @@ end
 
 get '/posts/:id/edit' do
   @post = Post.find_by_id(params[:id])
-  erb :edit
+  erb :"posts/edit"
 end
 
 get '/signup' do
-  erb :signup
+  erb :"users/signup"
 end
 
 post '/signup' do
@@ -70,7 +70,7 @@ post '/signup' do
 end
 
 get '/login' do
-  erb :login
+  erb :"users/login"
 end
 
 post '/login' do
@@ -78,7 +78,7 @@ post '/login' do
   if user && user.password == params[:user][:password]
     session[:user_id] = user.id
     flash[:alert] = "Successfully, logged in."
-    redirect "/users/#{user.id}"
+    redirect "/"
   else
     flash[:alert] = "Failed to log in."
     redirect '/login'
@@ -87,18 +87,19 @@ post '/login' do
 end
 
 get '/users/:id' do
-
-  if current_user.id == params[:id]
-    erb :showuser
-  else
-    flash[:alert] = "Sorry wrong credentials"
-  end
-  erb :showuser
+  @user = User.find_by_id(params[:id])
+  # if current_user.id == params[:id]
+  #   erb :"users/show"
+  # else
+  #   flash[:alert] = "Sorry wrong credentials"
+  # end
+  erb :"users/show"
 end
 
 get '/users/:id/edit' do
-  @user = User.find_by_id(params[:id])
-  erb :edituser
+  user = User.find_by_id(params[:id])
+  user.update(params[:user])
+  erb :"users/edit"
 end
 
 get "/users/:id/delete" do
