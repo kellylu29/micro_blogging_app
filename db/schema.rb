@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170811174811) do
+ActiveRecord::Schema.define(version: 20170811151127) do
 
   create_table "posts", force: :cascade do |t|
     t.string "content"
     t.string "username"
     t.string "title"
+    t.string "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -23,11 +24,6 @@ ActiveRecord::Schema.define(version: 20170811174811) do
     t.string "username"
     t.string "password"
     t.string "bio"
-  end
-
-  create_table "users_posts", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "post_id"
   end
 
 end
