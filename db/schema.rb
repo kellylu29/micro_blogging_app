@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20170811151127) do
     t.string "content"
     t.string "username"
     t.string "title"
-    t.string "user_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
