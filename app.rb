@@ -98,14 +98,14 @@ end
 
 get '/users/:id/edit' do
   @user = User.find_by_id(params[:id])
-  erb :edit
+  erb :edituser
 end
 
 get "/users/:id/delete" do
 	user = User.find_by_id(params[:id])
 	user.destroy
 	redirect "/"
-end	
+end
 
 get '/logout' do
   session.clear
