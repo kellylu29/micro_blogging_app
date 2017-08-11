@@ -1,0 +1,9 @@
+<h1>Current Post</h1>
+
+
+<h3> <%= @post.title %> </h3>
+<em> Author: <%= @post.username %> </em> <br>
+<%= @post.content %> <br>
+
+<br>
+<p><a href="/posts/<%= @post.id %>/edit">Edit Post</a></p>
