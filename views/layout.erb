@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/css/master.css">
   </head>
   <body>
+  <div class="container">
     <div class="flash-message">
 
       <% if flash[:notice] %>
@@ -21,24 +22,26 @@
       <% end %>
 
     </div>
+    <div class="nav-bar">
+      <span>
+      <a href="/">Home</a>
 
-    <a href="/">Home</a>
+      <% if current_user %>
+        <a href="/users/<%= current_user.id %>">My Profile</a>
+        <a href="/posts/new">Add New Post</a>
+        <a href="/">View All Posts</a>
+        <a href="/logout">Logout</a>
 
-    <% if current_user %>
-      <a href="/users/<%= current_user.id %>">My Profile</a>
-      <a href="/posts/new">Add New Post</a>
-      <a href="/logout">Logout</a>
+      <% else %>
+        <a href="/login">Login</a>
+        <a href="/signup">Signup</a>
+      <% end %>
+      </span>
+    </div>
 
-    <% else %>
-      <a href="/login">Login</a>
-      <a href="/signup">Signup</a>
-    <% end %>
-
-    <br>
-    <span><a href="/">View All Posts</a></span>
-
-    <p>Current user: <%= current_user ? current_user.username : "no one :(" %></p>
+    <p>Logged in as: <%= current_user ? current_user.username : "no one :(" %></p>
     <%= yield %>
+  </div>  
     <script src="/js/master.js"></script>
   </body>
 </html>

@@ -1,0 +1,54 @@
+hr {
+	width: 60%;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.nav-bar {
+
+}
+
+.front-page {
+	text-align: center;
+	
+}
+
+.front-page-post-container {
+	text-align: center;
+}
+
+.front-page-posts {
+	margin: 0 auto;
+	margin-bottom: 10px;
+	border: 1px solid black;
+	width: 550px;
+	padding: 5px;
+}
+
+.front-page-posts a {
+	text-decoration: none;
+	color: black;
+}
+
+.front-page-posts a:hover {
+	text-decoration: underline;
+}
+
+.profile-page {
+
+}
+
+.profile-page-info {
+
+}
+
+.profile-page-content {
+	margin: 0 auto;
+	margin-bottom: 10px;
+	border: 1px solid black;
+	width: 550px;
+	padding: 5px;
+}
