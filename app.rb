@@ -89,8 +89,9 @@ post '/login' do
 end
 
 get '/users/:id' do
-  @user = User.find_by_id(params[:id])
-  @post = Post.find_by_id(params[:user_id])
+
+   @user = User.find(params[:id])
+   @posts = @user.posts.sort_by { |r| r.id }.reverse
   erb :"users/show"
 end
 
