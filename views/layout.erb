@@ -25,6 +25,7 @@
     <a href="/">Home</a>
 
     <% if current_user %>
+      <a href="/users/<%= current_user.id %>">My Profile</a>
       <a href="/posts/new">Add New Post</a>
       <a href="/logout">Logout</a>
 
