@@ -7,6 +7,10 @@ body {
 	background-size: fill;
 }
 
+.text-center {
+	color: #337ab7
+}
+
 .flash-message {
 	text-align: center;
 }
