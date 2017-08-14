@@ -9,7 +9,7 @@
 				<p> About me: <%= @user.bio %></p>
 				<h3>E-mail: <%= @user.email %> </h3>
 				<% if current_user %>
-					<p><a href="/users/<%= @user.id %>/edit">Edit Profile</a></p>
+					<a href="/users/<%= @user.id %>/edit"><button class="btn btn-sm btn-primary">Edit Profile</button></a>
 				<% end %>
 			</div>
 	</div>
@@ -21,6 +21,9 @@
 				<h4><a href="/users/<%= post.user.id %>"> <%= post.user.username %> </a> </h4>
 			  <hr>
 			  <p><%= post.content%></p>
+			  <% if current_user %>
+					<a href="/posts/<%= @post.id %>/edit"><button class="btn btn-sm btn-primary">Edit Post</button></a>
+				<% end %>
 			</div>
 			<% end %>
 		</div>
