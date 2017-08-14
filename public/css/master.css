@@ -2,7 +2,7 @@ hr {
 	width: 60%;
 }
 
-.container {
+.container-main {
 	margin: 0 auto;
 	width: 1000px;
 }
@@ -58,4 +58,26 @@ hr {
 	border: 1px solid black;
 	width: 400px;
 	padding: 5px;
+}
+
+.login {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container {
+	width: 45%;
+	text-align: center;
+}
+
+.pull-right {
+	margin-top: 9px;
+}
+
+.container input {
+	margin-bottom: 5px;
+}
+
+.profile-img {
+	margin: 7px;
 }
