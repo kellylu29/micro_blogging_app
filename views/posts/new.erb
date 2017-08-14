@@ -1,15 +1,21 @@
-<h1>Create New Post</h1>
+<div class="new-post">
 
-<form action="/posts" method="post">
+  <div class="post-form">
+    <h1>Create New Post</h1>
 
-  <label><b>Title:</b></label><br>
-  <input type="text" name="post[title]">
-  <br><br>
+    <form action="/posts" method="post">
 
-  <label><b>Content:</b></label><br>
-  <textarea name="post[content]" rows="16" cols="70" maxlength="150"></textarea>
-  <br><br>
+      <label><b>Title:</b></label><br>
+      <textarea name="post[title]" class="post-title"> </textarea>
+      <br><br>
 
-  <input type="submit" name="" value="Post">
+      <label><b>Content:</b></label><br>
+      <textarea name="post[content]" maxlength="150" class="post-content"></textarea>
+      <br><br>
 
-</form>
+      <input class="btn btn-lg btn-primary btn-post" type="submit" name="" value="Post">
+
+    </form>
+  </div>
+
+</div>
