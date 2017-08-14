@@ -9,5 +9,6 @@
 <br>
 
 
-<br>
-<p><a href="/posts/<%= @post.id %>/edit">Edit Post</a></p>
+<% if current_user %>
+	<a href="/posts/<%= @post.id %>/edit"><button>Edit Post</button></a>
+<% end %>
