@@ -57,15 +57,15 @@ end
 post '/signup' do
   user = User.find_by(username: params[:user][:username])
   if user
-    flash[:alert] = "That username is taken."
+    flash[:alert] = "Sorry, that username is taken."
     redirect "/signup"
-  elsif params[:user][:username].length < 2 || params[:user][:password].length < 2
-    flash[:alert] = "Your username and password must be longer than 2 characters."
+  elsif params[:user][:username].length < 5 || params[:user][:password].length < 5
+    flash[:alert] = "Your username and password must be longer than 5 characters."
     redirect "/signup"
   else
      user = User.create(params[:user])
      session[:user_id] = user.id
-     flash[:alert] = "Yay you're signed up!"
+     flash[:alert] = "Congrats, you're signed up!"
      redirect "/users/#{user.id}"
   end
   erb "Params: #{params.inspect}"
@@ -79,7 +79,7 @@ post '/login' do
   user = User.find_by(username: params[:user][:username])
   if user && user.password == params[:user][:password]
     session[:user_id] = user.id
-    flash[:alert] = "Successfully, logged in."
+    flash[:alert] = "Successfully logged in."
     redirect "/"
   else
     flash[:alert] = "Failed to log in."
@@ -118,6 +118,6 @@ end
 
 get '/logout' do
   session.clear
-  flash[:alert] = "Bye!"
+  flash[:alert] = "Goodbye!"
   redirect '/'
 end
