@@ -1,38 +1,48 @@
-<h1>Edit Account</h1>
+<div class="new-post">
+  <div class="post-form">
+    <h1>Edit Account</h1>
 
-<form action="/users/<%= @user.id %>" method="post">
-  <input type="hidden" name="_method" value="put">
+    <form action="/users/<%= @user.id %>" method="post">
+      <input type="hidden" name="_method" value="put">
 
-  <label><b>Username:</b></label><br>
-  <input
-  type="text"
-  name="user[username]"
-  value="<%= @user.username %>" autofocus>
-  <br><br>
+      <label><b>Username:</b></label><br>
+      <input
+      type="text"
+      name="user[username]"
+      class="post-title"
+      value="<%= @user.username %>" autofocus>
+      <br><br>
 
-  <label><b>Password:</b></label><br>
-  <input
-  type="password"
-  name="user[password]"
-  value="<%= @user.password %>">
-  <br><br>
+      <label><b>Password:</b></label><br>
+      <input
+      type="password"
+      name="user[password]"
+      class="post-title"
+      value="<%= @user.password %>">
+      <br><br>
 
-  <label><b>Bio:</b></label><br>
-  <textarea
-  type="text"
-  name="user[bio]"
-  value="<%= @user.bio %>">
-  </textarea>
-  <br><br>
+      <label><b>Bio:</b></label><br>
+      <textarea
+      type="text"
+      name="user[bio]"
+      class="post-title"
+      value="<%= @user.bio %>">
+      </textarea>
+      <br><br>
 
-  <label><b>Email:</b></label><br>
-  <input
-  type="text"
-  name="user[email]"
-  value="<%= @user.email %>">
-  <br><br>
+      <label><b>Email:</b></label><br>
+      <input
+      type="text"
+      name="user[email]"
+      class="post-title"
+      value="<%= @user.email %>">
+      <br><br>
 
-  <input type="submit" name="" value="Submit">
+      <input class="btn btn-lg btn-primary btn-edit" type="submit" name="" value="Submit">
+      <a href="/users/<%= @user.id %>/delete"><button class="btn btn-lg btn-primary btn-edit">Delete</button></a>
+      <a href="/users/<%= @user.id %>"><button class="btn btn-lg btn-primary btn-edit">Cancel</button>
+    </form>
 
-</form>
-<p><a href="/users/<%= @user.id %>/delete">Delete</a></p>
+
+  </div>
+</div>
