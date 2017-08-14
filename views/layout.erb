@@ -51,7 +51,7 @@
         </div>
       <% end %>
     </div>
-    <p>Logged in as: <%= current_user ? current_user.username : "no one :(" %></p>
+    <p>Current User: <%= current_user ? current_user.username : "No user signed in." %></p>
     <%= yield %>
   </div>  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
