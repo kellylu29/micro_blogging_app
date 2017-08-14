@@ -7,8 +7,8 @@ hr {
 	width: 1000px;
 }
 
-.nav-bar {
-
+.navbar navbar-default {
+	width: 100%;
 }
 
 .front-page {
