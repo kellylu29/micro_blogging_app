@@ -1,14 +1,16 @@
-<h1>Current Post</h1>
+<div class="front-page-post-container">
+	<div class="front-page-posts">
+		<h1>Preview Post</h1>
 
 
-<h3> <%= @post.title %> </h3>
-<br>
-<h4> User: <a href="/users/<%= @user.id %>"> <%= @user.username %> </a> </h4>
-<br>
-<p> <%= @post.content %> </p>
-<br>
-
-
-<% if current_user %>
-	<a href="/posts/<%= @post.id %>/edit"><button>Edit Post</button></a>
-<% end %>
+		<h3> <%= @post.title %> </h3>
+		<br>
+		<h4> User: <a href="/users/<%= @user.id %>"> <%= @user.username %> </a> </h4>
+		<hr>
+		<p> <%= @post.content %> </p>
+		<br>
+		<% if current_user %>
+			<a href="/posts/<%= @post.id %>/edit"><button class="btn btn-lg btn-primary btn-edit">Edit Post</button></a>
+		<% end %>
+	</div>
+</div>
