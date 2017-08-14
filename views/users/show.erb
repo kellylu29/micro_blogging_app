@@ -22,7 +22,7 @@
 			  <hr>
 			  <p><%= post.content%></p>
 			  <% if current_user.id == @user.id %>
-					<a href="/posts/<%= @post.id %>/edit"><button class="btn btn-sm btn-primary">Edit Post</button></a>
+					<a href="/posts/<%= post.id %>/edit"><button class="btn btn-sm btn-primary">Edit Post</button></a>
 				<% end %>
 			</div>
 			<% end %>
