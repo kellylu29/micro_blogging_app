@@ -34,7 +34,8 @@ hr {
 .front-page-posts {
 	margin: 0 auto;
 	margin-bottom: 10px;
-	border: 1px solid black;
+	border: 1px solid lightgrey;
+	border-radius: 8px;
 	width: 550px;
 	padding: 5px;
 }
@@ -60,14 +61,16 @@ hr {
 .profile-page-info {
 	padding: 5px;
 	width: 100%;
-	border: 1px solid black;
+	border: 1px solid lightgrey;
+	border-radius: 8px;
 }
 
 .profile-page-content {
 	text-align: center;
 	margin: 0 auto;
 	margin-bottom: 10px;
-	border: 1px solid black;
+	border: 1px solid lightgrey;
+	border-radius: 8px;
 	width: 400px;
 	padding: 5px;
 }
@@ -117,7 +120,7 @@ hr {
 .post-form h1 {
 	padding: 0;
 	margin-top: 0;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 .post-content {
