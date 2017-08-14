@@ -2,10 +2,20 @@ hr {
 	width: 60%;
 }
 
+body {
+	background-image: url("../images/background.jpg");
+	background-size: fill;
+}
+
+.flash-message {
+	text-align: center;
+}
+
 /* Layout */
 .container-main {
 	margin: 0 auto;
 	width: 1000px;
+	padding-bottom: 20px;
 }
 
 .navbar navbar-default {
@@ -15,7 +25,13 @@ hr {
 /* Index */
 .front-page {
 	text-align: center;
+}
 
+.front-page h1 {
+	font-size: 48px;
+	font-weight: bold;
+	margin: 20px;
+	color: #337ab7;
 }
 
 .front-page button {
@@ -34,10 +50,11 @@ hr {
 .front-page-posts {
 	margin: 0 auto;
 	margin-bottom: 10px;
-	border: 1px solid lightgrey;
+	border: 3px solid rgba(51, 122, 183, 0.5);
 	border-radius: 8px;
 	width: 550px;
 	padding: 5px;
+	background-color: rgba(255, 255, 255, 0.8)
 }
 
 .front-page-posts a {
@@ -59,20 +76,22 @@ hr {
 }
 
 .profile-page-info {
-	padding: 5px;
+	padding: 15px;
 	width: 100%;
-	border: 1px solid lightgrey;
+	border: 3px solid rgba(51, 122, 183, 0.5);
 	border-radius: 8px;
+	background-color: rgba(255, 255, 255, 0.8)
 }
 
 .profile-page-content {
 	text-align: center;
 	margin: 0 auto;
 	margin-bottom: 10px;
-	border: 1px solid lightgrey;
+	border: 3px solid rgba(51, 122, 183, 0.5);;
 	border-radius: 8px;
 	width: 400px;
-	padding: 5px;
+	padding: 15px;
+	background-color: rgba(255, 255, 255, 0.8)
 }
 
 /* Login */
@@ -92,7 +111,8 @@ hr {
 }
 
 .container h3 {
-	margin-bottom: 15px;
+	margin-bottom: 20px;
+	font-size: 40px;
 }
 
 .container input {
@@ -106,9 +126,10 @@ hr {
 /* New post & Edit post */
 .new-post {
 	width: 100%;
-	border: 1px solid lightgrey;
+	border: 3px solid rgba(51, 122, 183, 0.5);;
 	padding: 20px;
 	border-radius: 8px;
+	background-color: rgba(255, 255, 255, 0.8)
 }
 
 .post-form {
@@ -130,7 +151,7 @@ hr {
 	width: 500px;
 	resize: none;
 	border-radius: 8px;
-	border: 1px solid lightgrey;
+	border: 3px solid rgba(51, 122, 183, 0.5);;
 }
 
 .post-title {
@@ -140,7 +161,7 @@ hr {
 	height: 40px;
 	border-radius: 8px;
 	resize: none;
-	border: 1px solid lightgrey;
+	border: 3px solid rgba(51, 122, 183, 0.5);;
 }
 
 .btn-post {
@@ -152,4 +173,8 @@ hr {
 	margin-right: 5px;
 	margin-left: 5px;
 	margin-bottom: 20px;
+}
+
+footer {
+	text-align: center;
 }
