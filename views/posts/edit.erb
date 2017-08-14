@@ -1,33 +1,33 @@
-<h1>Edit Post</h1>
+<div class="new-post">
+  <div class="post-form">
+    <h1>Edit Post</h1>
 
-<form action="/posts/<%= @post.id %>" method="post">
-  <input type="hidden" name="_method" value="put">
+    <form action="/posts/<%= @post.id %>" method="post">
+      <input type="hidden" name="_method" value="put">
 
-  <label><b>Title:</b></label><br>
-  <input
-  type="text"
-  name="post[title]"
-  value="<%= @post.title %>">
-  <br><br>
+      <label><b>Title:</b></label><br>
+      <input
+      type="text"
+      name="post[title]"
+      value="<%= @post.title %>"
+      class="post-title">
+      <br><br>
 
-  <label><b>Content:</b></label><br>
-  <textarea name="post[content]"
-  rows="16"
-  cols="70"
-  maxlength="150"
-  value="<%= @post.content %>">
-  </textarea>
-  <br><br>
+      <label><b>Content:</b></label><br>
+      <textarea name="post[content]"
+      rows="16"
+      cols="70"
+      maxlength="150"
+      value="<%= @post.content %>"
+      class="post-content">
+      </textarea>
+      <br><br>
 
-  <label><b>Username:</b></label><br>
-  <input
-  type="text"
-  name="post[username]"
-  value="<%= @post.username %>">
-  <br><br>
 
-  <input type="submit" name="" value="Submit">
+      <input class="btn btn-lg btn-primary btn-edit" type="submit" name="" value="Submit">
+      <a href="/posts/<%= @post.id %>"><button class="btn btn-lg btn-primary btn-edit">Cancel</button></a>
+    </form>
 
-</form>
 
-<p><a href="/posts/<%= @post.id %>">Back</a></p>
+  </div>
+</div>

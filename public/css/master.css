@@ -2,6 +2,7 @@ hr {
 	width: 60%;
 }
 
+/* Layout */
 .container-main {
 	margin: 0 auto;
 	width: 1000px;
@@ -11,9 +12,10 @@ hr {
 	width: 100%;
 }
 
+/* Index */
 .front-page {
 	text-align: center;
-	
+
 }
 
 .front-page button {
@@ -45,6 +47,7 @@ hr {
 	text-decoration: underline;
 }
 
+/* Profile Page */
 .profile-page {
 
 }
@@ -69,6 +72,7 @@ hr {
 	padding: 5px;
 }
 
+/* Login */
 .login {
 	width: 100%;
 	margin: 0 auto;
@@ -89,4 +93,54 @@ hr {
 
 .profile-img {
 	margin: 7px;
+}
+
+/* New post & Edit post */
+.new-post {
+	width: 100%;
+	border: 1px solid lightgrey;
+	padding: 20px;
+	border-radius: 8px;
+}
+
+.post-form {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.post-form h1 {
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 40px;
+}
+
+.post-content {
+	font-size: 16px;
+	padding: 10px;
+	height: 100px;
+	width: 500px;
+	resize: none;
+	border-radius: 8px;
+	border: 1px solid lightgrey;
+}
+
+.post-title {
+	padding: 8px;
+	font-size: 16px;
+	width: 500px;
+	height: 40px;
+	border-radius: 8px;
+	resize: none;
+	border: 1px solid lightgrey;
+}
+
+.btn-post {
+	width: 300px;
+}
+
+.btn-edit {
+	width: 150px;
+	margin-right: 5px;
+	margin-left: 5px;
 }
