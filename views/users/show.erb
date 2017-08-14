@@ -1,18 +1,19 @@
-#showuser
-<h3> <%= @user.username %> </h3>
-<p><%= @user.bio %></p>
-<br>
-<h2> <%= @user.email %> </h2> <br>
-<% @posts.each do |post| %>
-
-  <h3> <%= post.title %> </h3>
-  <br>
-	<h4> User: <a href="/users/<%= post.user.id %>"> <%= post.user.username %> </a> </h4>
-  <br>
-  <p><%= post.content%></p>
-  <br>
-  <br>
-<% end %>
-<% if current_user %>
-<p><a href="/users/<%= @user.id %>/edit">Edit Profile</a></p>
-<% end %>
+<div class="profile-page">
+	<div class="profile-page-info">	
+		<h3> <%= @user.username %> </h3>
+		<p><%= @user.bio %></p>
+		<h3> <%= @user.email %> </h3>
+		<% if current_user %>
+			<p><a href="/users/<%= @user.id %>/edit">Edit Profile</a></p>
+		<% end %>
+	</div>
+		<% @posts.each do |post| %>
+			<div class="profile-page-content">
+			  <h3> <%= post.title %> </h3>
+			  <br>
+				<h4> User: <a href="/users/<%= post.user.id %>"> <%= post.user.username %> </a> </h4>
+			  <br>
+			  <p><%= post.content%></p>
+			</div>
+		<% end %>
+</div>
