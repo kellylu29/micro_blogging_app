@@ -1,19 +1,28 @@
 <div class="profile-page">
-	<div class="profile-page-info">	
-		<h3> <%= @user.username %> </h3>
-		<p><%= @user.bio %></p>
-		<h3> <%= @user.email %> </h3>
-		<% if current_user %>
-			<p><a href="/users/<%= @user.id %>/edit">Edit Profile</a></p>
-		<% end %>
+	<div clas="row">
+		<div class="col-md-6">
+			<div class="profile-page-info">	
+				<div class="profile-photo">
+					 <img src="https://guidelighter.s3.amazonaws.com/uploads/profile/profile_image/162/anonymous.png" width="300px">
+				</div>
+				<h3>User: <%= @user.username %> </h3>
+				<p> About me: <%= @user.bio %></p>
+				<h3>E-mail: <%= @user.email %> </h3>
+				<% if current_user %>
+					<p><a href="/users/<%= @user.id %>/edit">Edit Profile</a></p>
+				<% end %>
+			</div>
 	</div>
+	<div class="col-md-6">
 		<% @posts.each do |post| %>
 			<div class="profile-page-content">
 			  <h3> <%= post.title %> </h3>
 			  <br>
-				<h4> User: <a href="/users/<%= post.user.id %>"> <%= post.user.username %> </a> </h4>
-			  <br>
+				<h4><a href="/users/<%= post.user.id %>"> <%= post.user.username %> </a> </h4>
+			  <hr>
 			  <p><%= post.content%></p>
 			</div>
-		<% end %>
+			<% end %>
+		</div>
+	</div>
 </div>

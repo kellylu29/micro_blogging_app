@@ -26,7 +26,6 @@
             <% if current_user %>
               <li><a href="/users/<%= current_user.id %>">My Profile</a></li>
               <li><a href="/posts/new">Add New Post</a></li>
-              <li><a href="/">View All Posts</a></li>
               <li><a href="/logout">Logout</a></li>
               <% else %>
                 <li><a href="/login">Login</a></li>
