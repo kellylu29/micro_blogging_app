@@ -30,7 +30,6 @@ hr {
 
 .front-page-posts a {
 	text-decoration: none;
-	color: black;
 }
 
 .front-page-posts a:hover {
@@ -41,14 +40,22 @@ hr {
 
 }
 
-.profile-page-info {
+.profile-photo {
+	text-align: center;
+	margin: 5px;
+}
 
+.profile-page-info {
+	padding: 5px;
+	width: 100%;
+	border: 1px solid black;
 }
 
 .profile-page-content {
+	text-align: center;
 	margin: 0 auto;
 	margin-bottom: 10px;
 	border: 1px solid black;
-	width: 550px;
+	width: 400px;
 	padding: 5px;
 }
