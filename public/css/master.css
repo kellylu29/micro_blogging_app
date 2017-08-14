@@ -16,6 +16,14 @@ hr {
 	
 }
 
+.front-page button {
+	margin: 8px;
+}
+
+.front-page button a {
+	color: white;
+}
+
 .front-page-post-container {
 	text-align: center;
 }
